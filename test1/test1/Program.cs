@@ -18,32 +18,32 @@ namespace test1
 
 
             Console.WriteLine("║  請輸入身高:         ║");
-            int height = int.Parse(Console.ReadLine());
+            double height = int.Parse(Console.ReadLine());
 
             Console.WriteLine("║  請輸入體重:         ║");
-            int weight = int.Parse(Console.ReadLine());
+            double weight = int.Parse(Console.ReadLine());
 
-            int high = height / 100;
-            int BMI = weight / (high * high);
-            Console.WriteLine("║  BMI為:" + BMI + "            ║");
+            
+            double BMI = weight / ((height / 100) * (height /100));
+            Console.WriteLine("║  BMI為:{0:0}            ║", BMI);
 
             if (BMI < 18.5)
-                Console.WriteLine("║   你的體重過輕噢     ║");
+                Console.WriteLine("║    你的體重過輕噢    ║");
 
             if (18.5 <= BMI && BMI < 24)
-                Console.WriteLine("║   你的體重正常。     ║");
+                Console.WriteLine("║     你的體重正常。   ║");
 
-            if (24 <= BMI)
-                Console.WriteLine("║   你的體重過重了！   ║");
+            if (BMI >= 24)
+                Console.WriteLine("║    你的體重過重了！  ║");
 
             if (BMI < 16.5)
-                Console.WriteLine("║       免役           ║");
+                Console.WriteLine("║         免役         ║");
 
             if (16.5 <= BMI && BMI < 31.5)
                 Console.WriteLine("║     你需要服兵役     ║");
 
-            if (31.5 < BMI)
-                Console.WriteLine("║       免役           ║");
+            if (BMI >= 31.5)
+                Console.WriteLine("║         免役         ║");
 
             Console.WriteLine("╚═══════════╝");
 
