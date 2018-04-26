@@ -53,7 +53,7 @@ namespace test1
             // 外框
             Console.WriteLine("╚═══════════╝");
 
-            // 防治視窗自動關閉
+            // 防止視窗自動關閉
             Console.ReadLine();
         }
     }
